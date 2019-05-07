@@ -10,7 +10,8 @@ import { NavmenuComponent } from './components/navmenu/navmenu.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import {AlertService} from "../services/alert.service";
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,9 +25,10 @@ import { LoginComponent } from './components/login/login.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpClientModule,AlertService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
